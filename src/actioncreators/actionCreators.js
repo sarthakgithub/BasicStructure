@@ -1,0 +1,1 @@
+export const userinfo = (userInfoDetails) => ({ type : 'USER_INFO', userInfoDetails}); 
