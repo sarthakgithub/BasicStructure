@@ -13,6 +13,16 @@ class Login extends React.Component{
 		}
 	}
 
+	componentWillReceiveProps(nextProps){
+		console.log('nextProps',nextProps);
+	}
+	
+	componentDidMount(){
+		if(localStorage.getItem('loginStatus')){
+			this.props.historyObj.history.replace("/home");
+		}
+	}
+
 	handleChange(event) {
 		const target = event.target;
 		const value = target.value;

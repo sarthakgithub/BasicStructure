@@ -49,13 +49,16 @@ app.get('/items', function(req, res){
 });
 
 app.put('/checkinglogin',function(req,res){
-    var test = req.body;
     if(req.body.username === 'sarthak' && req.body.password === 'sarthak'){
         res.send({isLogin: true});
     }else{
         res.send({isLogin: false});
     }
 })
+
+app.get('*', function (req, res) {
+    res.sendFile(path.join(__dirname, './index.html'));
+});
 
 app.listen(port, () => {
     console.log('Server listening to 3000 port.');
