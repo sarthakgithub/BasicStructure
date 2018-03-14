@@ -1,9 +1,13 @@
 import { call, put, takeEvery, all } from 'redux-saga/effects';
 import * as actionTypes from '../constants/constants';
-import { postLoginInfo } from '../dataapi/api';
+import { postLoginInfo, fetchingItems } from '../dataapi/api';
 
 export function* watchLoginInfo(action){
     const loginInfo = yield call(postLoginInfo, action.userInfoDetails);
+
+    const itemsdata = yield call(fetchingItems);
+    console.log('Items Data',itemsdata);
+    
     yield put({ type: 'LOGIN_STATE', loginInfo});
 }
 

@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import reducer from '../reducers/reducers.js';
 import {rootSaga} from '../sagas/saga.js';
 import createSagaMiddleware from 'redux-saga';
+import '../css/accordion.css';
 
 const sagaMiddleware = createSagaMiddleware();
 

@@ -41,6 +41,7 @@ class Login extends React.Component{
 		}
 		this.props.loginInfo(userinfo);
 		if(this.props.isLogin){
+			
 			this.props.historyObj.history.push("/home");
 		}
 	}

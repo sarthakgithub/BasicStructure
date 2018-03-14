@@ -1,0 +1,97 @@
+.show{
+  display: block;
+}
+
+.hide{
+  display: none;
+}
+
+.imageContainer{
+  display: block;
+  width: 1000px;
+  height: 350px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.imageContainer img{
+  display:inline-block;
+  width: 100%;
+}
+
+.prevBtn{
+  position: absolute;
+  z-index: 2;
+  left: 0;
+}
+
+
+.nextBtn{
+  position: absolute;
+  z-index: 2;
+  left: 50px;
+}
+
+.leave {
+  transform: translateX(0);
+}
+
+.enter-active.enter-next, .enter-active.enter-prev {
+  transform: translateX(0);
+  transition: transform 500ms linear;
+}
+
+.enter-next {
+  transform: translateX(100%);
+}
+
+.enter-prev {
+  transform: translateX(-100%);
+  transition: transform 500ms linear;
+}
+
+.leave-active-next {
+  transform: translateX(-100%);
+  transition: transform 500ms linear;
+}
+
+.leave.leave-active-prev {
+  transform: translateX(100%);
+  transition: transform 500ms linear;
+}
+
+
+/*tic css */
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  font-size: 24px;
+  line-height: 34px;
+  height: 34px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  width: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
